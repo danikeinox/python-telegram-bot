@@ -8,6 +8,10 @@ from telegram.ext import CommandHandler, CallbackContext, ApplicationBuilder, In
 import firebase_admin
 from firebase_admin import auth, credentials, firestore
 
+# Configurar el keepalive para evitar que la aplicación se detenga
+from keep_alive import keep_alive
+keep_alive()
+
 # Configurar el logger
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
